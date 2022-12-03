@@ -15,14 +15,14 @@ module.exports = {
         console.log(req.body);
         exec(`docker run -d -it --name ${containerName}  -p ${portNumber}:25565 -e EULA=TRUE -e DIFFICULTY=${difficulty} -e MODE=${gameMode} -e SERVER_NAME='${serverName}' -e MAX_PLAYERS=${maxPlayers} -e ONLINE_MODE=${onlineMode} -e ALLOW_FLIGHT=${allowFlight} itzg/minecraft-server`, 
             (error, stdout, sterr, ) => {
-                if (error) {
+                /*if (error) {
                     console.log(`error: ${error.message}`);
                     return;
                 }
                 if (stderr) {
                     console.log(`stderr: ${stderr}`);
                     return;
-                }
+                }*/
                 console.log(`stdout: ${stdout}`);
         });
         res.status(200).send();
