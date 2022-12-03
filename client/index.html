@@ -6,23 +6,27 @@
     <body>
         <h1> live mc servers </h1>
         <p> list of servers here </p>
-        <form action="https://purple.lan.moralestech.xyz/api/delete_server" method="delete">
+        <form action="http://localhost:4000/api/delete_server" method="delete">
             <p> server 1  <button type="button"> delete </button> </p>
             <p> server 2  <button type="button"> delete </button> </p>
             <p> server 3  <button type="button"> delete </button> </p>
         </form>
         <br>
         
-        <form action="https://purple.lan.moralestech.xyz/api/create_server" method="post">
+        <form action="http://localhost:4000/api/create_server" method="post">
         <h1> create new server </h1>
         <br>
 
         <label for="containerName"> container name(no spaces) </label>
-        <input type="text" id=containerName" name="containerName"><br>
+        <input type="text" id=containerName" name="containerName" value="server1"><br>
         <br>
 
         <label for="serverName"> server name </label>
-        <input type="text" id="serverName" name="serverName"><br>
+        <input type="text" id="serverName" name="serverName" value="My server"><br>
+        <br>
+
+        <label for="versionNumber"> version number(1.19, 1.8, etc) </label>
+        <input type="text" id="versionNumber" name="versionNumber" value="1.19"><br>
         <br>
 
         <label for="difficulty"> choose a difficulty </label>
@@ -36,7 +40,7 @@
         <br>
 
         <label for="port"> port number </label>
-        <input type="text" id="portNumber" name="portNumber"><br>
+        <input type="text" id="portNumber" name="portNumber" value="25565"><br>
         <br>
 
         <label for="gameMode"> choose a gamemode </label>
@@ -50,7 +54,7 @@
         <br>
 
         <label for="maxPlayers"> max players </label>
-        <input type="text" id="maxPlayers" name="maxPlayers"><br>
+        <input type="text" id="maxPlayers" name="maxPlayers" value="10"><br>
         <br>
 
         <p> online mode </p>
@@ -62,9 +66,9 @@
 
         <p> allow flight </p>
         <label for="true"> yes </label>
-        <input type="radio" id="allowFlight" name"allowFlight" value="true"><br>
+        <input type="radio" id="allowFlight" name="allowFlight" value="true"><br>
         <label for="false"> no </label>
-        <input type="radio" id="allowFlight" name"allowFlight" value="false"><br>
+        <input type="radio" id="allowFlight" name="allowFlight" value="false"><br>
         <br>
 
         <input type="submit" id="createServerButton" value="submit">

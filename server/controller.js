@@ -6,6 +6,7 @@ module.exports = {
         //create server here
         const { containerName,
                 serverName, 
+                versionNumber,
                 difficulty,
                 portNumber,
                 gameMode,
@@ -13,8 +14,8 @@ module.exports = {
                 onlineMode,
                 allowFlight } = req.body;
         console.log(req.body);
-        exec(`docker run -d -it --name ${containerName}  -p ${portNumber}:25565 -e EULA=TRUE -e DIFFICULTY=${difficulty} -e MODE=${gameMode} -e SERVER_NAME='${serverName}' -e MAX_PLAYERS=${maxPlayers} -e ONLINE_MODE=${onlineMode} -e ALLOW_FLIGHT=${allowFlight} itzg/minecraft-server`, 
-            (error, stdout, sterr, ) => {
+        exec(`docker run -d -it --name ${containerName}  -e VERSION=${versionNumber} -p ${portNumber}:25565 -e EULA=TRUE -e DIFFICULTY=${difficulty} -e MODE=${gameMode} -e SERVER_NAME='${serverName}' -e MAX_PLAYERS=${maxPlayers} -e ONLINE_MODE=${onlineMode} -e ALLOW_FLIGHT=${allowFlight} itzg/minecraft-server`, 
+            (error, stdout, stderr, ) => {
                 if (error) {
                     console.log(`error: ${error.message}`);
                     return;
