@@ -6,8 +6,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const { createServer
-        deleteServer } = require('./controller')
+const { //createServer
+        //deleteServera
+      } = require('./controller')
 
 app.get("/api/create_server", createServer);
 app.delete("/api/delete_server", deleteServer);
