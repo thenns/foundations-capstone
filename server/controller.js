@@ -4,7 +4,7 @@ const { exec } = require('child_process');
 module.exports = {
     createServer: (req, res) => {
         //create server here
-        const { containerName
+        const { containerName,
                 serverName, 
                 difficulty,
                 portNumber,
