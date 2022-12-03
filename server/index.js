@@ -6,6 +6,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const {  } = require('./controller')
+const { createServer
+        deleteServer } = require('./controller')
 
+app.get("/api/create_server", createServer);
+app.delete("/api/delete_server", deleteServer);
 app.listen(4000, () => console.log("server running on 4000"));
