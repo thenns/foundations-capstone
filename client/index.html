@@ -51,7 +51,6 @@
 
         <label for="maxPlayers"> max players </label>
         <input type="text" id="maxPlayers" name="maxPlayers"><br>
-        <br>
 
         <p> online mode </p>
         <label for="true"> true </label>
@@ -60,11 +59,13 @@
         <input type="radio" id="onlineMode" name="onlineMode" value="false"><br>
         <br>
 
-
-        <label for="allowFlight"> allow flight </label>
-        <input type="boolean" id="allowFlight" name="allowFlight"><br>
+        <p> allow flight </p>
+        <label for="true"> true </label>
+        <input type="radio" id="allowFlight" name"allowFlight" value="true"><br>
+        <label for="false"> false </label>
+        <input type="radio" id="allowFlight" name"allowFlight" value="false"><br>
         <br>
-        <input type="submit" id="createServerButton" value="submit">
+
         </form>
 
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
