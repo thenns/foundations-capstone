@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>foundations capstone</title>
+    </head>
+    <body>
+        <h1> live mc servers </h1>
+        <p> list of servers here </p>
+        <br>
+        
+        <form action="http://localhost:4000/api/create_server" method="post">
+        <h1> create new server </h1>
+        <br>
+
+        <label for="serverName"> server name </label>
+        <input type="text" id="serverName" name="serverName"<br>
+        <br>
+
+        <label for="difficulty"> choose a difficulty </label>
+        <select name="difficulty" id="difficulty">
+            <option value="peaceful">peaceful</option>
+            <option value="easy">easy</option>
+            <option value="hard">hard</option>
+            <option value="hardcore">hardcore</option>
+        </select>
+        <br>
+
+        <label for="port"> port number </label>
+        <input type="text" id="portNumber" name="portNumber"<br>
+        <br>
+
+        <label for="gameMode"> choose a gamemode </label>
+        <select name="gameMode" id="gameMode">
+            <option value="survival">survival</option>
+            <option value="creative">creative</option>
+            <option value="spectator">spectator</option>
+            <option value="adventure">adventure</option>
+        </select>
+        <br>
+
+        <label for="maxPlayers"> max players </label>
+        <input type="text" id="maxPlayers" name="maxPlayers"<br>
+        <br>
+
+        <label for="onlineMode"> online mode </label>
+        <input type="checkbox" id="onlineMode" name="onlineMode"<br>
+        <br>
+
+
+        <label for="allowFlight"> allow flight </label>
+        <input type="checkbox" id="allowFlight" name="allowFlight"<br>
+        <br>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
