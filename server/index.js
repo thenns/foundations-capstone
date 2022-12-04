@@ -9,14 +9,11 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const { createServer,
+        getServers,
         deleteServer
       } = require('./controller');
-//app.engine('html', ');
-//app.set('view engine', 'html');
-//app.get('/', function (req, res) {
-//    res.render('index', {});
-//});
 app.post("/api/create_server", createServer);
+app.get("/api/get_servers", getServers);
 app.delete("/api/delete_server", deleteServer);
 app.listen(4000, () => console.log("server running on 4000"));
 
