@@ -24,7 +24,7 @@ const getServers = () => {
             serverTable += "<div id='serversTable'><table><tr><th> server name </th>" +
                            "<th> container name </th>" +
                            "<th> port number </th>" +
-                           "<th> max # of players </th></tr>";
+                           "<th> max number of players </th></tr>";
             data.forEach(function(item){
                 serverTable += '<tr><td>'+ item.serverName + '</td>' +
                                '<td>' + item.containerName + '</td>' +
