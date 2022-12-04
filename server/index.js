@@ -14,7 +14,7 @@ const { createServer,
       } = require('./controller');
 app.post("/api/create_server", createServer);
 app.get("/api/get_servers", getServers);
-app.delete("/api/delete_server", deleteServer);
+app.post("/api/delete_server", deleteServer);
 app.listen(4000, () => console.log("server running on 4000"));
 
 app.use(express.static('../client'));

@@ -10,7 +10,7 @@ const createServer = () => {
 };
 
 const deleteServer = () => {
-    axios.delete("http://localhost:4000/api/delete_server")
+    axios.post("http://localhost:4000/api/delete_server")
         .then(res => {
             const data = res.data;
         });

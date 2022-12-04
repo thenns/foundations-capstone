@@ -55,12 +55,31 @@ module.exports = {
         //create a delete server function 
         //it will delete the server from json file and run a docker
         //command to delete it from the server
+        const { containerName } = req.body;
+        console.log(containerName);
+        execSync(`docker kill $(docker ps -q) && docker rm $(docker ps -a -q) && rm -rf server.json && touch server.json && echo '[]' >> server.json`,
+            (error, stdout, stderr) => {
+                if (error) {
+                    console.log(`error: ${error.message}` );
+                    return;
+                }
+                if (stderr) {
+                    console.log(`stderr: ${stderr}` );
+                    return;
+                }
+                console.log(`stdout: ${stdout}`);
+        });
+        //let newServer = '[]';
+        //fs.writeFileSync(fileName, JSON.stringify(newServer), function writeJSON(err) {
+        //    if (err) return console.log(err);
+        //    console.log(JSON.stringify(newServer));
+        //});
         res.status(200).send();
     },
     getServers: (req, res) => {
         //display a list of currently running servers
         let servers = JSON.parse(fs.readFileSync(fileName));
-        console.log(servers);
+        //console.log(servers);
         res.status(200).send(servers);
     },
 }
