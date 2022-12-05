@@ -2,7 +2,6 @@ const userServers = require('./server.json');
 const { execSync } = require('child_process');
 const fs = require('fs');
 const fileName = './server.json';
-
 module.exports = {
     createServer: (req, res) => {
         //create server here
@@ -69,17 +68,11 @@ module.exports = {
                 }
                 console.log(`stdout: ${stdout}`);
         });
-        //let newServer = '[]';
-        //fs.writeFileSync(fileName, JSON.stringify(newServer), function writeJSON(err) {
-        //    if (err) return console.log(err);
-        //    console.log(JSON.stringify(newServer));
-        //});
         res.status(200).send();
     },
     getServers: (req, res) => {
         //display a list of currently running servers
         let servers = JSON.parse(fs.readFileSync(fileName));
-        //console.log(servers);
         res.status(200).send(servers);
     },
 }

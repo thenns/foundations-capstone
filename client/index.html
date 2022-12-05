@@ -11,65 +11,34 @@
         <center>
         <h1> live minecraft servers </h1>
         <div id="serverStatus" class="mx-left" style="width: 400px">
- <!--       <form action="http://localhost:4000/api/delete_server" method="delete">
-            <p> server 1  <button type="button" id="deleteServerButton"> delete </button> </p>
-            <p> server 2  <button type="button"> delete </button> </p>
-            <p> server 3  <button type="button"> delete </button> </p>
- </form> -->
         <br>
         </div> 
-
         <h1> delete servers </h1>
-        <!--<label for="delete server"> container name </label>
-        <input type="text" id="deleteServer" name="deleteServer"<br>
-        <br> -->
-        <!--<label for="deleteServer" id="deleteServer"> click submit to delete all servers </label>-->
         <p> click submit to delete all servers </p>
         <input type="submit" id="deleteServerButton" value="submit">
-
         <form action="http://localhost:4000/api/create_server" method="post">
         <h1> create new server </h1>
         <label class="labelText" for="containerName"> container name (no spaces) </label>
         <input type="text" id=containerName" name="containerName" value="server1"><br>
         <br>
-
         <label class="labelText" for="serverName"> server name </label>
         <input type="text" id="serverName" name="serverName" value="My server"><br>
         <br>
-
         <label class="labelText" for="serverDesc"> server description </label>
         <input type="text" id="serverDesc" name="serverDesc" value=""><br>
         <br>
-
         <label class="labelText" for="versionNumber"> version number (1.19, 1.8, etc) </label>
         <input type="text" id="versionNumber" name="versionNumber" value="1.19"><br>
         <br>
-     
- <!--       <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                difficulty
-            </button>
-            <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">peaceful</a></li>
-                <li><a class="dropdown-item" href="#">easy</a></li>
-                <li><a class="dropdown-item" href="#">hard</a></li>
-                <li><a class="dropdown-item" href="#">hardcore</a></li>
-            </ul>
-        </div> -->
         <label class="labelText" for="port"> port number </label>
         <input type="text" id="portNumber" name="portNumber" value="25565"><br>
         <br>
-
-        <!-- <label for="gameMode"> choose a gamemode </label>-->
         <div>
-            <!--<select class="form-select" aria-lable="Floating label select example" name="gameMode" id="gameMode"> -->
-        
-
         <label class="labelText" for="maxPlayers"> max players </label>
         <input type="text" id="maxPlayers" name="maxPlayers" value="10"><br>
         <br>
         <div>
-                <label for="gameMode"> choose a game mode </label> 
+        <label for="gameMode"> choose a game mode </label> 
         <select name="gameMode" id="gameMode">
             <option value="survival">survival</option>
             <option value="creative">creative</option>
@@ -78,34 +47,28 @@
         </select>
         <br>
         <br>
-            <!--<label for="difficulty"> choose a difficulty </label> id below was difficulty like 'id=difficulty' -->
-            <label for="difficulty"> choose a difficulty </label>
+        <label for="difficulty"> choose a difficulty </label>
         <select name="difficulty" id="difficulty">
-            <!--<select class="form-select" aria-label="Floating label select example" name="difficulty" id="difficulty">--> 
             <option value="peaceful">peaceful</option>
             <option value="easy">easy</option>
             <option value="hard">hard</option>
             <option value="hardcore">hardcore</option>
         </select>
         </div>
-
         <p> online mode </p>
         <label for="true"> yes </label>
         <input type="radio" id="onlineMode" name="onlineMode" value="true"><br>
         <label for"false"> no </label> 
         <input type="radio" id="onlineMode" name="onlineMode" value="false"><br>
         <br>
-
         <p> allow flight </p>
         <label for="true"> yes </label>
         <input type="radio" id="allowFlight" name="allowFlight" value="true"><br>
         <label for="false"> no </label>
         <input type="radio" id="allowFlight" name="allowFlight" value="false"><br>
         <br>
-
         <input type="submit" id="createServerButton" value="submit">
         </form>
-
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

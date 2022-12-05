@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-
 const app = express();
 
 app.use(cors());
@@ -16,5 +15,4 @@ app.post("/api/create_server", createServer);
 app.get("/api/get_servers", getServers);
 app.post("/api/delete_server", deleteServer);
 app.listen(4000, () => console.log("server running on 4000"));
-
 app.use(express.static('../client'));
