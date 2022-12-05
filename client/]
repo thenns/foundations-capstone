@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
-        <title> purple </title>
+        <title> purple titanium </title>
     </head>
     <body>
         <center>
@@ -23,26 +23,41 @@
         <!--<label for="delete server"> container name </label>
         <input type="text" id="deleteServer" name="deleteServer"<br>
         <br> -->
-        <!--<label for="deleteServer" id="deleteServer"> click submit to delete all servers </label>-->
-        <p> click submit to delete all servers </p>
-        <input type="submit" id="deleteServerButton" value="submit">
+        <label for="deleteServer" id="deleteServer"> click submit to delete all servers </label>
+        <input class="btn btn-primary" type="submit" id="deleteServerButton" value="submit">
 
         <form action="http://localhost:4000/api/create_server" method="post">
         <h1> create new server </h1>
+        <br>
+
         <label class="labelText" for="containerName"> container name (no spaces) </label>
         <input type="text" id=containerName" name="containerName" value="server1"><br>
         <br>
 
-        <label class="labelText" for="serverName"> server name </label>
+        <label for="serverName"> server name </label>
         <input type="text" id="serverName" name="serverName" value="My server"><br>
         <br>
 
-        <label class="labelText" for="serverDesc"> server description </label>
+        <label for="serverDesc"> server description </label>
         <input type="text" id="serverDesc" name="serverDesc" value=""><br>
         <br>
 
-        <label class="labelText" for="versionNumber"> version number (1.19, 1.8, etc) </label>
+        <label for="versionNumber"> version number (1.19, 1.8, etc) </label>
         <input type="text" id="versionNumber" name="versionNumber" value="1.19"><br>
+        <br>
+
+        <div>
+            <!--<label for="difficulty"> choose a difficulty </label> id below was difficulty like 'id=difficulty' -->
+            <label for="difficulty"> choose a difficulty </label>
+        <select name="difficulty" id="difficulty">
+            <!--<select class="form-select" aria-label="Floating label select example" name="difficulty" id="difficulty">--> 
+            <option value="peaceful">peaceful</option>
+            <option value="easy">easy</option>
+            <option value="hard">hard</option>
+            <option value="hardcore">hardcore</option>
+        </select>
+        </div>
+        <br>
         <br>
      
  <!--       <div class="dropdown">
@@ -56,20 +71,14 @@
                 <li><a class="dropdown-item" href="#">hardcore</a></li>
             </ul>
         </div> -->
-        <label class="labelText" for="port"> port number </label>
+        <label for="port"> port number </label>
         <input type="text" id="portNumber" name="portNumber" value="25565"><br>
         <br>
 
         <!-- <label for="gameMode"> choose a gamemode </label>-->
         <div>
             <!--<select class="form-select" aria-lable="Floating label select example" name="gameMode" id="gameMode"> -->
-        
-
-        <label class="labelText" for="maxPlayers"> max players </label>
-        <input type="text" id="maxPlayers" name="maxPlayers" value="10"><br>
-        <br>
-        <div>
-                <label for="gameMode"> choose a game mode </label> 
+            <label for="gameMode"> choose a game mode </label> 
         <select name="gameMode" id="gameMode">
             <option value="survival">survival</option>
             <option value="creative">creative</option>
@@ -78,16 +87,10 @@
         </select>
         <br>
         <br>
-            <!--<label for="difficulty"> choose a difficulty </label> id below was difficulty like 'id=difficulty' -->
-            <label for="difficulty"> choose a difficulty </label>
-        <select name="difficulty" id="difficulty">
-            <!--<select class="form-select" aria-label="Floating label select example" name="difficulty" id="difficulty">--> 
-            <option value="peaceful">peaceful</option>
-            <option value="easy">easy</option>
-            <option value="hard">hard</option>
-            <option value="hardcore">hardcore</option>
-        </select>
-        </div>
+
+        <label for="maxPlayers"> max players </label>
+        <input type="text" id="maxPlayers" name="maxPlayers" value="10"><br>
+        <br>
 
         <p> online mode </p>
         <label for="true"> yes </label>
@@ -103,7 +106,7 @@
         <input type="radio" id="allowFlight" name="allowFlight" value="false"><br>
         <br>
 
-        <input type="submit" id="createServerButton" value="submit">
+        <input class="btn btn-primary" type="submit" id="createServerButton" value="submit">
         </form>
 
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
